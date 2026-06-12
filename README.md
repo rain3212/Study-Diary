@@ -63,14 +63,26 @@ I2C频率：100kHz
 ## 六、AHT20通信流程
 
 1. 传感器上电后等待至少 5ms。
+
+   <img src="README.assets/d4ebe0d0851355e5cf3da357912af8d2.png" alt="手册内容1" style="zoom:50%;" />
+
 2. ESP32 通过 I2C 向 AHT20 发送测量命令 `0xAC 0x33 0x00`。
+
 3. 发送完成后等待 80ms，让传感器完成温湿度测量。
+
+   <img src="README.assets/d4ebe0d0851355e5cf3da357912af8d2-1781263866813-2.png" alt="手册内容2" style="zoom:60%;" />
+
 4. 通过 `Wire.requestFrom(0x38, 7)` 从 AHT20 读取 7 个字节。
+
 5. 判断 `data[0]` 的 Bit7，如果 Bit7 为 1，说明传感器仍然忙。
+
 6. 如果 Bit7 为 0，则解析湿度 20bit 数据和温度 20bit 数据。
+
 7. 根据公式换算得到实际湿度和温度。
 
 ## 七、温湿度计算公式
+
+<img src="README.assets/image-20260612192220733.png" alt="image-20260612192220733" style="zoom:67%;" />
 
 ```
 uint32_t rawHumidity =
@@ -91,10 +103,54 @@ AHT20 的湿度和温度原始数据都是 20bit，因此使用 uint32_t 保存�
 
 ## 八、常见问题
 
-1.为什么代码里要用0x38而不是0x71？
+1 . 为什么代码里要用0x38而不是0x71？
 
-   Arduino Wire 库使用 7 位 I2C 地址。AHT20 的 7 位地址是 0x38。Wire.requestFrom(0x38, 7) 在总线上实际发出的就是读地址 0x71。
+   Arduino Wire 库使用 7 位 I2C 地址，一共传输了八位数据其中前7位作为地址而第8位作为读写控制位,相当于主机给了地址然后告诉你要在这个地址做读操作还是写操作。
 
-2.串口显示ovf是什么原因
+> AHT20 的 7 位地址是 0x38。Wire.requestFrom(0x38, 7) 在总线上实际发出的就是读地址 0x71。
+
+2 . 串口显示ovf是什么原因
 
    通常是读取失败后仍然打印未赋值的 temp 变量。应该先判断 readAHT20() 是否返回 true，再打印温湿度。
+
+3 . uint8_t是什么意思和int类型有什么区别
+
+   ```
+   u      = unsigned，无符号，不能表示负数
+   int    = integer，整数
+   8      = 8 bit
+   _t     = type，类型
+   ```
+
+所以uint8_t的意思是无符号8位整数类型
+
+和int类型的区别主要表现在所占空间，数值范围上，uint8_t所占空间是确定的1字节，而int在不同的开发板上所占空间不一样
+
+```
+Arduino UNO 上 int 通常是 16 bit
+ESP32 上 int 通常是 32 bit
+```
+
+4 . &&和&不一样，||和|也不一样
+
+   &&是逻辑与，用来判断两个条件，比如
+
+```
+if (a > 0 && b > 0)
+```
+
+   &则是按位与，用来检查二进制，比如
+
+```
+if (data[0] & 0x80)
+```
+
+   ||是逻辑或，|是按位或，常用于拼接二进制，比如
+
+```
+rawTemperature =
+  (((uint32_t)data[3] & 0x0F) << 16) |
+  ((uint32_t)data[4] << 8) |
+  data[5];
+```
+
