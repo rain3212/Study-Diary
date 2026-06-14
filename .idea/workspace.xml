@@ -12,7 +12,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3bdea8c1-bac0-4509-97d2-9f9408fa15a5" name="更改" comment="修改了第一天的文件夹名称" />
+    <list default="true" id="3bdea8c1-bac0-4509-97d2-9f9408fa15a5" name="更改" comment="修改了第一天的文件夹名称">
+      <change afterPath="$PROJECT_DIR$/100_test_homework/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,12 +38,15 @@
     &quot;assignee&quot;: &quot;rain3212&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/rain3212/Study-Diary.git&quot;,
-    &quot;accountId&quot;: &quot;01f25764-7584-4db0-915f-a36daaa9238c&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/rain3212/Study-Diary.git",
+    "accountId": "76528980-c1ec-461e-b1ef-952279a57c57"
   }
-}</component>
+}]]></component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="IM0GE6jn" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
 }</component>
@@ -52,13 +57,18 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/kivvi/Documents/JetBrains_Project/CLion/Study-Diary",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,6 +92,7 @@
       <updated>1781441073572</updated>
       <workItem from="1781441075264" duration="1835000" />
       <workItem from="1781442938349" duration="364000" />
+      <workItem from="1781443825743" duration="52000" />
     </task>
     <task id="LOCAL-00001" summary="add project files">
       <option name="closed" value="true" />
