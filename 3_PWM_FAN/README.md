@@ -19,3 +19,17 @@
 ## 结论
 
 把需要学会的内容写在这里
+
+### 材料
+
+1.NEC6020AI
+
+<img src="README.assets/image-20260615121002389.png" alt="image-20260615121002389" style="zoom:45%;" />
+
+2.二极管
+
+3.直流有刷电机
+
+<img src="README.assets/image-20260615121107593.png" alt="image-20260615121107593" style="zoom:50%;" />
+
+4.风扇叶
