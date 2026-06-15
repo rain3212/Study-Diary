@@ -26,7 +26,7 @@
 
 <img src="README.assets/image-20260615121002389.png" alt="image-20260615121002389" style="zoom:45%;" />
 
-2.二极管
+2.二极管?
 
 3.直流有刷电机
 
