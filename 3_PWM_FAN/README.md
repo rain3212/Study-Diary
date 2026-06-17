@@ -16,6 +16,18 @@
 
 <img src="README.assets/image-20260617202533663.png" alt="image-20260617202533663" style="zoom:80%;" />
 
+选型：
+
+MOS管：AO3400A
+
+二极管：1N5819WS
+
+电机高速小马达：淘宝链接（从朱方获取）
+
+<img src="README.assets/image-20260617204219657.png" alt="image-20260617204219657" style="zoom:67%;" />
+
+
+
 ## 结论
 
 把需要学会的内容写在这里
