@@ -8,7 +8,7 @@
 >
 > 需要学会的内容：ESP-IDF,CMake 是什么，工程目录结构是什么样，`idf.py` 的基本作用，CLion 里怎么选择目标芯片，怎么编译、烧录，menuconfig， monitor，串口号怎么看，编译失败和烧录失败怎么排查，会调试打断点
 >
-> 这个实验不要求外设，只要求把开发环境跑通
+> 这个实验不要求外设，只要求把开发环境跑通 (彻底卸载原来的espidf 安装最新版本)
 
 ## 步骤
 
@@ -20,6 +20,10 @@
 6. 烧录到 ESP32
 7. 打开串口监视器，确认能看到 `Hello world!` 和启动信息
 8. 会使用调试器，修改运行中的变量 比如 for 循环打印数字，for (int i = 0; i < 10; i++) 可以随意修改i的大小
+
+## 相关教程
+- https://www.youtube.com/watch?v=6qR9nHm4HDQ
+- https://docs.espressif.com/projects/esp-idf/zh_CN/v6.0.1/esp32/get-started/index.html
 
 ## 学习过程
 
