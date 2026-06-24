@@ -89,6 +89,21 @@ void shiftOutSoft(byte data) {
 
 软件SPI就是自己控制数据线，时钟线以及自己决定什么时候所存；任何的GPIO都可以使用，缺点就是速度慢占用CPU，因为执行期间，单片机一直手打时钟拍子
 
+```c++
+void write595(uint16_t value) {
+  if (LED_ACTIVE_LOW) {
+    value = ~value;
+  }
+```
+
+还有一种接法是595当GND用，灯的+极接VCC，负极接595，当595高电平灯不亮，低电平亮(就像下面那种，低电平有效)
+
+<img src="README.assets/image-20260624152802676.png" alt="image-20260624152802676" style="zoom:50%;" />
+
+正常我是这样的高电平有效<img src="README.assets/image-20260624152901445.png" alt="image-20260624152901445" style="zoom:80%;" />
+
+
+
 ##### 8.硬件SPI
 
 是单片机内部自带的通信外设（高速串行发送模块），有软件SPI做的事情硬件SPI自己就做了，只需要调用函数就可以
