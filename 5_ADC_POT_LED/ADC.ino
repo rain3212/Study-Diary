@@ -25,9 +25,10 @@ void setup() {
 }
 
 void loop() {
-    uint32_t voltageMv = analogRead(adcPin);
+    //这是一个占比，并不是真正的电压值
+    float voltageMv = analogRead(adcPin);
     Serial.print("    Voltage = ");
-    Serial.print(voltageMv);
+    Serial.print(voltageMv / 4096 * 3.3);
     Serial.println(" mV");
     ledcWrite(ledPin, voltageMv);
     delay(100);
