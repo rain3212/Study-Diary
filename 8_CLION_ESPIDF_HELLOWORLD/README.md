@@ -27,8 +27,8 @@
 
 ## 学习过程
 
-...学习过程写在这里
+<img src="README.assets/image-20260722185949130.png" alt="image-20260722185949130" style="zoom:57%;" />
 
-## 结论
+![image-20260722190119885](README.assets/image-20260722190119885.png)
 
-把需要学会的内容写在这里
+![image-20260722190144407](README.assets/image-20260722190144407.png)
